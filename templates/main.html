@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>场强分布</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- 导入库 -->
+    <script charset="utf-8" src="https://map.qq.com/api/gljs?v=1.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+    <script src="{{ url_for('static', filename='turf.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='xlsx.full.min.js') }}"></script>
+</head>
+
+<body>
+    <div id="form-container">
+        <p></p>        
+        <form>
+            <div class="form">
+                <label for="Min">最小值</label>
+                <input type="text" name="Min" id="Min">
+            </div>
+            <div class="form">
+                <label for="Max">最大值</label>
+                <input type="text" name="Max" id="Max">
+            </div>
+            <div class="form">
+                <label for="Step">步长</label>
+                <input type="text" name="Step" id="Step">
+            </div>
+            <button type="button" onclick="updateFunction()">上传</button>
+            <div class="form">
+                <input type="file" name="fileInput" id="fileInput">
+            </div>
+            <div class="select">
+                <label for="select">其他功能</label>
+                <select name="select" id="select" onchange="handleSelect()">
+                    <option value="" selected disabled>请选择</option>
+                    <option value="1">显示数据点</option>
+                    <option value="2">关闭</option>
+                </select>
+            </div>
+        </form>
+        <p></p>
+    </div>
+    <div id="container"></div>
+    <div id="info">
+        当前地图的经纬度范围 (右上 + 左下) 为:
+        (<span id="r-u"></span> + <span id="l-d"></span>)
+    </div>
+    <script src="{{ url_for('static', filename='request.js') }}"></script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
+</body>
+
+</html>

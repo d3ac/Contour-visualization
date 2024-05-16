@@ -1,0 +1,4 @@
+Flask==2.3.2
+numpy==1.24.4
+pandas==1.5.3
+PyKrige==1.7.1
