@@ -26,7 +26,7 @@
 
 ### 使用方法：
 
-运行`host.py`（如果遇见了`ModuleNotFoundError: No module named 'xxx'`, 则使用命令安装`pip install xxx`），在浏览器打开http://localhost:5000/，在框内输入需要显示的数据最小值、数据最大值、步长，然后点击“选择文件”，然后再点击上传按钮，拖动地图即可显示出图像，在这里你可以尝试使用`files/raw.xlsx`文件作为输入（主要是其他文件输入格式还需要改）。
+运行`host.py`（如果遇见了`ModuleNotFoundError: No module named 'xxx'`, 则使用命令安装`pip install xxx`），在浏览器打开`http://localhost:5000/`，在框内输入需要显示的数据最小值、数据最大值、步长，然后点击“选择文件”，然后再点击上传按钮，拖动地图即可显示出图像，在这里你可以尝试使用`files/raw.xlsx`文件作为输入（主要是其他文件输入格式还需要改）。
 
 ### 其他：
 
